@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"/>
+        <title>Chat Room</title>
+    </head>
+    <body>
+        <div class="join-page">
+            <header class="join-header">
+                <h1>Chat Room</h1>
+            </header>
+            <main class="join-main">
+                <form action="./chat_main/chat.html">
+                    <div class="form-item">
+                        <label for="username">Username</label>
+                        <input
+                            type="text"
+                            name="username"
+                            id="username"
+                            placeholder="Enter you username here..."
+                            required
+                        >
+                    </div>
+
+                    <div class="form-item">
+                        <label for="chatroom">ChatRoom</label>
+                        <input
+                            type="text"
+                            name="chatroom"
+                            id="chatroom"
+                            list="avaliable-rooms"
+                            placeholder="Enter the room you want to join..."
+                            required
+                        >
+                        <datalist id="avaliable-rooms">
+                        </datalist>
+                    </div>
+                    <button type="submit" class="btn">Join Chat</button>
+                </form>
+            </main>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="landing.js"></script>
+    </body>  
+</html>
